@@ -15,5 +15,5 @@ pip install -r requirements.txt
 ```
 cd template_rendering
 source ~/.venv/template/bin/activate
-python3 render.py -t <template.jinja> -v <values.yaml>
+python3 render.py -t templates/gre.j2 -v values/gre.yaml
 ```
