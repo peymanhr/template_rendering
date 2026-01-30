@@ -3,6 +3,8 @@
 ## Installation
 
 ```
+git clone https://github.com/peymanhr/template_rendering.git
+cd template_rendering
 python3 -m venv ~/.venv/template
 source ~/.venv/template/bin/activate
 pip install -r requirements.txt
