@@ -1,0 +1,10 @@
+ipsec:
+  secret: "AML87tgh"
+local:
+  name: asia
+  public_ip: 178.22.123.205
+  private_ip: 192.168.99.1/30
+remote:
+  name: de
+  public_ip: 193.56.59.98
+  private_ip: 192.168.99.2/30

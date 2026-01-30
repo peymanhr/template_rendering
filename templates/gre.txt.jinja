@@ -1,0 +1,7 @@
+interface/gre add name={{ remote.name }}-gre local-address={{ local.public_ip }} remote-address={{ remote.public_ip }} allow-fast-path=no ipsec-secret={{ ipsec.secret }}
+ip address/add interface={{ remote.name }}-gre address={{ local.private_ip }}
+ip firewall/nat/add chain=srcnat out-interface={{ remote.name }}-gre action=masquerade
+
+interface/gre add name={{ local.name }}-gre local-address={{ remote.public_ip }} remote-address={{ local.public_ip }} allow-fast-path=no ipsec-secret={{ ipsec.secret }}
+ip address/add interface={{ local.name }}-gre address={{ remote.private_ip }}
+ip firewall/nat/add chain=srcnat out-interface={{ local.name }}-gre action=masquerade
