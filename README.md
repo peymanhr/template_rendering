@@ -13,5 +13,7 @@ pip install -r requirements.txt
 ## Usage
 
 ```
-python3 render -t <template.jinja> -v <values.yaml>
+cd template_rendering
+source ~/.venv/template/bin/activate
+python3 render.py -t <template.jinja> -v <values.yaml>
 ```
